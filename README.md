@@ -1,4 +1,4 @@
-# cs332-project
+# 332-project
 [CSED332] Software Design Methods Team Project
 
 ## Progress of Week 1
