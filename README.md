@@ -10,3 +10,6 @@
 * Juyeon Ok - Learning about the VM environment
 * Jinmo Kim - Finding the testing envrionment
 * Hyunji Song - Analysing the overall structure of the project
+
+앞으로 다음 notion 링크를 이용해서 주간 상황을 보고한다.
+https://substantial-calculator-ca6.notion.site/CSE-332-Project-b87a3fb58af847c7a97e508e7074daec
