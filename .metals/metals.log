@@ -798,3 +798,11 @@ WARNING: Unmatched cancel notification for request id 4550
 2022.11.25 14:37:27 WARN  no build target for: /home/black/Working/332project/main/scala/Worker/WorkerState.scala
 2022.11.25 14:42:56 WARN  no build target for: /home/black/Working/332project/main/scala/Network/ServerBase.scala
 2022.11.25 14:43:26 WARN  no build target for: /home/black/Working/332project/main/scala/Network/ServerBase.scala
+2022.11.25 15:04:04 WARN  no build target for: /home/black/Working/332project/main/scala/Master/Main.scala
+2022.11.25 15:04:27 WARN  no build target for: /home/black/Working/332project/main/scala/Master/MasterServer.scala
+Nov 25, 2022 3:04:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 452
+2022.11.25 15:04:46 WARN  no build target for: /home/black/Working/332project/main/scala/Network/ServerBase.scala
+2022.11.25 15:05:42 WARN  no build target for: /home/black/Working/332project/main/scala/Worker/Main.scala
+2022.11.25 15:06:10 WARN  no build target for: /home/black/Working/332project/main/scala/Worker/WorkerServer.scala
+2022.11.25 15:06:11 WARN  no build target for: /home/black/Working/332project/main/scala/Worker/WorkerServer.scala
