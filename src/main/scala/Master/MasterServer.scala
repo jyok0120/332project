@@ -3,7 +3,7 @@ package Master
 import scala.concurrent.{ExecutionContext, Future}
 
 import Network.{ServerBase, ServerInterface}
-import Network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
 
 object MasterServer extends ServerInterface {
   val server : ServerBase = new ServerBase (

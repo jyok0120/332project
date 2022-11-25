@@ -5,14 +5,14 @@ import org.apache.logging.log4j.scala.Logging
 import io.grpc.{Server, ServerBuilder, ServerServiceDefinition}
 
 trait ServerInterface {
-  val server : Server
+  val server : ServerBase
   def startserver () = {server.start()}
   def stopserver () = {server.stop()}
 }
 
 class ServerBase ( serverService : ServerServiceDefinition,
                    serverName : String,
-                   serverPort : Int) {
+                   serverPort : Int) extends Logging {
 
   self => private[this] var server: Server = null
 

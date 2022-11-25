@@ -4,7 +4,7 @@ import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 
 import Network.{ServerBase, ServerInterface}
-import Network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
 
 object WorkerServer extends ServerInterface{
   val server: ServerBase = new ServerBase(

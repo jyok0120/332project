@@ -967,3 +967,154 @@ INFO: Unsupported notification method: $/setTrace
 2022.11.25 15:56:25 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/Main.scala
 2022.11.25 15:57:43 WARN  no build target for: /home/black/Working/332project/build.sbt
 2022.11.25 16:01:09 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/Main.scala
+2022.11.25 16:04:23 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:04:38 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/Main.scala
+2022.11.25 16:04:39 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:07:51 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 16:09:11 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 16:09:11 INFO  skipping build import with status 'Dismissed'
+2022.11.25 16:09:51 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:11:58 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:12:06 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:12:11 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 16:12:14 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterState.scala
+2022.11.25 16:12:19 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerState.scala
+2022.11.25 16:12:21 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerState.scala
+2022.11.25 16:12:48 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:12:50 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:13:54 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:14:49 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:15:55 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 16:16:09 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:16:50 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 16:17:02 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 16:17:22 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 16:53:30 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 16:53:43 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 16:53:44 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterState.scala
+2022.11.25 16:54:07 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 16:54:21 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 16:54:26 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 16:58:15 WARN  no build target for: /home/black/Working/332project/build.sbt
+Nov 25, 2022 5:19:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 25, 2022 5:25:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1978
+Nov 25, 2022 5:25:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1987
+Nov 25, 2022 5:25:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1991
+Nov 25, 2022 5:25:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1999
+Nov 25, 2022 5:26:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2192
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2246
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2250
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2255
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2262
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2260
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2266
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2269
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2268
+Nov 25, 2022 5:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2270
+2022.11.25 17:27:30 WARN  no build target for: /home/black/Working/332project/build.sbt
+Nov 25, 2022 5:28:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.11.25 17:28:35 INFO  shutting down Metals
+2022.11.25 17:28:45 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.25 17:28:46 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.25 17:28:46 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.25 17:28:46 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.25 17:28:47 INFO  time: initialize in 0.9s
+2022.11.25 17:28:47 WARN  Build server is not auto-connectable.
+2022.11.25 17:28:47 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 17:28:48 INFO  skipping build import with status 'Dismissed'
+2022.11.25 17:28:51 INFO  no build target found for /home/black/Working/332project/build.sbt. Using presentation compiler with project's scala-library version: 3.2.0
+2022.11.25 17:28:53 INFO  time: code lens generation in 4.38s
+2022.11.25 17:30:02 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 17:30:44 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 17:30:44 INFO  skipping build import with status 'Dismissed'
+Nov 25, 2022 5:31:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.11.25 17:31:43 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 17:31:43 INFO  skipping build import with status 'Dismissed'
+2022.11.25 17:31:46 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 17:31:53 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 17:31:57 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 17:32:13 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 17:32:19 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 17:32:56 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 17:33:07 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 17:35:34 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 17:35:47 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 17:35:47 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterState.scala
+2022.11.25 17:35:49 WARN  no build target for: /home/black/Working/332project/project/plugins.sbt
+2022.11.25 17:45:43 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.25 17:45:44 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.25 17:45:44 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.71.2.
+2022.11.25 17:45:44 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.25 17:45:44 INFO  time: initialize in 0.65s
+2022.11.25 17:45:45 WARN  Build server is not auto-connectable.
+2022.11.25 17:51:34 INFO  shutting down Metals
+Nov 25, 2022 6:29:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 25, 2022 6:29:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.11.25 20:23:12 INFO  shutting down Metals
+2022.11.25 21:12:04 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.25 21:12:04 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.25 21:12:04 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.25 21:12:04 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.25 21:12:05 INFO  time: initialize in 0.95s
+2022.11.25 21:12:06 WARN  Build server is not auto-connectable.
+2022.11.25 21:12:09 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:12:12 INFO  no build target found for /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.11.25 21:12:14 INFO  time: code lens generation in 1.74s
+2022.11.25 21:16:36 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:21:24 INFO  shutting down Metals
+2022.11.25 21:21:25 ERROR Unexpected error initializing serverorg.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+2022.11.25 21:23:49 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.25 21:23:50 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.25 21:23:50 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.25 21:23:50 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.25 21:23:51 INFO  time: initialize in 0.93s
+2022.11.25 21:23:51 WARN  Build server is not auto-connectable.
+2022.11.25 21:23:52 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:23:54 INFO  no build target found for /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.11.25 21:23:56 INFO  time: code lens generation in 3.48s
+2022.11.25 21:27:18 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.25 21:27:19 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 21:27:31 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterState.scala
+2022.11.25 21:27:32 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.25 21:27:47 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:27:48 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:28:06 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:28:07 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:28:11 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerState.scala
+2022.11.25 21:29:52 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 21:29:52 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.25 21:29:57 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:30:04 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:30:56 WARN  no build target for: /home/black/Working/332project/target/scala-2.12/src_managed/main/scalapb/Communicate/network/MasterWorkerServiceGrpc.scala
+2022.11.25 21:31:38 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 21:31:49 WARN  no build target for: /home/black/Working/332project/build.sbt
