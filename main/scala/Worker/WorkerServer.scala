@@ -20,10 +20,10 @@ private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWork
   }
 }
 
-class WorkerClient( ip : String, port : Int) {
-    private val masterChannel = ManagedChannelBuilder.forAddress(ip,port).usePlaintext.ManagedChannelBuilder
+class WorkerClient( host : String, port : Int) {
+    private val masterChannel = ManagedChannelBuilder.forAddress(host,port).usePlaintext(true).build
     private val masterBlockingStub = MasterWorkerServiceGrpc.blockingStub(masterChannel)
-
+    
     def RegisterWorker(request: RegisterMsg): ResponseMsg = {
         masterBlockingStub.RegisterWorker(request)
     }

@@ -14,9 +14,11 @@ object Main {
 
   
   // Register worker to master
-  val workerClient: WorkerClient = new WorkerClient("141.223.16.227",2201) // ip and port parameter
+  val workerClient: WorkerClient = new WorkerClient("141.223.16.227",2203) // host and port parameter
+  
   logger.info(s"Trying to register worker to channel ${workerClient}")
-  val registerResponse: ResponseMsg = workerClient.RegisterWorker(new RegisterMsg("141.223.16.227",2201))
+  
+  val registerResponse: ResponseMsg = workerClient.masterBlockingStub.RegisterWorker(new RegisterMsg("141.223.16.227",2201))
   
   if( registerResponse.response == ResponseMsg.ResponseType.ERROR)
   {
