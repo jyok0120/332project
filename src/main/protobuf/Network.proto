@@ -30,7 +30,7 @@ service MergeService {
 message RegisterMsg {
   // ip of worker
   string address = 1;
-  int port = 2;  
+  int32 port = 2;  
 }
 
 message ReportMsg {
@@ -56,7 +56,7 @@ message SampleArrayMsg {
   bytes serializedsample = 1;
 }
 
-message ParititionRequestMsg {
+message PartitionRequestMsg {
   bytes serializedWorker = 1; 
 }
 

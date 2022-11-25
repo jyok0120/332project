@@ -963,3 +963,7 @@ Caused by: java.nio.file.NoSuchFileException: /home/black/Working/332project/pro
 2022.11.25 15:34:48 WARN  no build target for: /home/black/Working/332project/main/scala/Master/MasterServer.scala
 Nov 25, 2022 3:37:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2022.11.25 15:56:25 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 15:56:25 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/Main.scala
+2022.11.25 15:57:43 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 16:01:09 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/Main.scala
