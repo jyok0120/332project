@@ -1118,3 +1118,784 @@ INFO: Unsupported notification method: $/setTrace
 2022.11.25 21:30:56 WARN  no build target for: /home/black/Working/332project/target/scala-2.12/src_managed/main/scalapb/Communicate/network/MasterWorkerServiceGrpc.scala
 2022.11.25 21:31:38 WARN  no build target for: /home/black/Working/332project/build.sbt
 2022.11.25 21:31:49 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.25 21:49:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:49:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:49:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:49:05 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:49:11 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:49:17 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:49:30 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:49:32 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:49:34 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:57:39 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:58:05 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:58:17 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 21:59:15 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 21:59:20 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 21:59:23 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+Nov 25, 2022 9:59:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 529
+2022.11.25 21:59:40 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+Nov 25, 2022 9:59:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: file:///home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala:3: error: can't use unescaped LF in character literals
+'
+ ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchSingleQuote$1(LegacyScanner.scala:417)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:444)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:245)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:233)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:50)
+	at scala.meta.internal.mtags.MtagsIndexer.index(MtagsIndexer.scala:19)
+	at scala.meta.internal.mtags.MtagsIndexer.index$(MtagsIndexer.scala:18)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.index(ScalaToplevelMtags.scala:40)
+	at scala.meta.internal.mtags.Mtags$.allToplevels(Mtags.scala:96)
+	at scala.meta.internal.metals.DefinitionProvider.fromMtags(DefinitionProvider.scala:286)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$3(DefinitionProvider.scala:206)
+	at scala.Option.orElse(Option.scala:477)
+	at scala.meta.internal.metals.DefinitionProvider.$anonfun$positionOccurrence$1(DefinitionProvider.scala:206)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.DefinitionProvider.positionOccurrence(DefinitionProvider.scala:201)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$definitionOrReferences$1(MetalsLanguageServer.scala:2600)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.MetalsLanguageServer.definitionOrReferences(MetalsLanguageServer.scala:2596)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$definition$1(MetalsLanguageServer.scala:1490)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.definition(MetalsLanguageServer.scala:1489)
+	... 15 more
+
+2022.11.25 21:59:49 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 22:00:02 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 22:00:06 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 22:00:29 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+Nov 25, 2022 10:00:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Nov 25, 2022 10:00:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.11.25 22:05:04 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:05:44 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 22:05:54 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 22:06:34 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:06:42 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:06:59 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:07:06 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:07:33 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+Nov 25, 2022 10:07:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1086
+2022.11.25 22:08:50 WARN  no build target for: /home/black/Working/332project/target/scala-2.12/src_managed/main/scalapb/Communicate/network/MasterWorkerServiceGrpc.scala
+2022.11.25 22:10:36 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+Nov 25, 2022 10:11:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1198
+2022.11.25 22:12:01 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.25 22:13:22 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.25 22:13:52 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+error while checking new RegisterMsg(null)
+error while checking workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking val registerResponse: ResponseMsg = 
+  workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking  extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking module object WorkerMain extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking package <empty> {
+  import org.apache.logging.log4j.scala.Logging
+  import Communicate.network.{RegisterMsg, ResponseMsg}
+  import Worker.{WorkerServer, WorkerClient}
+  module object WorkerMain extends Logging {
+    logger.info("Worker start")
+    WorkerServer.startserver
+    val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+    logger.info(
+      s"Trying to register worker to channel {
+        {
+          workerClient
+        }
+      }"
+    )
+    val registerResponse: ResponseMsg = 
+      workerClient.RegisterWorker(new RegisterMsg(null))
+  }
+}
+Nov 25, 2022 10:14:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..892>,
+child       = null # -1,
+child span  = [581..893..893]
+java.lang.AssertionError: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..892>,
+child       = null # -1,
+child span  = [581..893..893]
+	at scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:172)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$1(ParserPhase.scala:38)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$adapted$1(ParserPhase.scala:39)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:417)
+	at dotty.tools.dotc.parsing.Parser.parse(ParserPhase.scala:39)
+	at dotty.tools.dotc.parsing.Parser.runOn$$anonfun$1(ParserPhase.scala:48)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.parsing.Parser.runOn(ParserPhase.scala:48)
+	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
+	at dotty.tools.dotc.Run.runPhases$1(Run.scala:245)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:253)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:262)
+	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:68)
+	at dotty.tools.dotc.Run.compileUnits(Run.scala:262)
+	at dotty.tools.dotc.Run.compileSources(Run.scala:186)
+	at dotty.tools.dotc.interactive.InteractiveDriver.run(InteractiveDriver.scala:165)
+	at scala.meta.internal.pc.MetalsDriver.run(MetalsDriver.scala:48)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:47)
+
+error while checking new RegisterMsg(null)
+error while checking workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking val registerResponse: ResponseMsg = 
+  workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking  extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking module object WorkerMain extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking package <empty> {
+  import org.apache.logging.log4j.scala.Logging
+  import Communicate.network.{RegisterMsg, ResponseMsg}
+  import Worker.{WorkerServer, WorkerClient}
+  module object WorkerMain extends Logging {
+    logger.info("Worker start")
+    WorkerServer.startserver
+    val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+    logger.info(
+      s"Trying to register worker to channel {
+        {
+          workerClient
+        }
+      }"
+    )
+    val registerResponse: ResponseMsg = 
+      workerClient.RegisterWorker(new RegisterMsg(null))
+  }
+}
+Nov 25, 2022 10:14:55 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..893>,
+child       = null # -1,
+child span  = [581..894..894]
+java.lang.AssertionError: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..893>,
+child       = null # -1,
+child span  = [581..894..894]
+	at scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:172)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$1(ParserPhase.scala:38)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$adapted$1(ParserPhase.scala:39)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:417)
+	at dotty.tools.dotc.parsing.Parser.parse(ParserPhase.scala:39)
+	at dotty.tools.dotc.parsing.Parser.runOn$$anonfun$1(ParserPhase.scala:48)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.parsing.Parser.runOn(ParserPhase.scala:48)
+	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
+	at dotty.tools.dotc.Run.runPhases$1(Run.scala:245)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:253)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:262)
+	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:68)
+	at dotty.tools.dotc.Run.compileUnits(Run.scala:262)
+	at dotty.tools.dotc.Run.compileSources(Run.scala:186)
+	at dotty.tools.dotc.interactive.InteractiveDriver.run(InteractiveDriver.scala:165)
+	at scala.meta.internal.pc.MetalsDriver.run(MetalsDriver.scala:48)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:47)
+
+error while checking new RegisterMsg(null)
+error while checking workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking val registerResponse: ResponseMsg = 
+  workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking  extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking module object WorkerMain extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking package <empty> {
+  import org.apache.logging.log4j.scala.Logging
+  import Communicate.network.{RegisterMsg, ResponseMsg}
+  import Worker.{WorkerServer, WorkerClient}
+  module object WorkerMain extends Logging {
+    logger.info("Worker start")
+    WorkerServer.startserver
+    val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+    logger.info(
+      s"Trying to register worker to channel {
+        {
+          workerClient
+        }
+      }"
+    )
+    val registerResponse: ResponseMsg = 
+      workerClient.RegisterWorker(new RegisterMsg(null))
+  }
+}
+Nov 25, 2022 10:14:56 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..896>,
+child       = null # -1,
+child span  = [581..897..897]
+java.lang.AssertionError: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..896>,
+child       = null # -1,
+child span  = [581..897..897]
+	at scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:172)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$1(ParserPhase.scala:38)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$adapted$1(ParserPhase.scala:39)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:417)
+	at dotty.tools.dotc.parsing.Parser.parse(ParserPhase.scala:39)
+	at dotty.tools.dotc.parsing.Parser.runOn$$anonfun$1(ParserPhase.scala:48)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.parsing.Parser.runOn(ParserPhase.scala:48)
+	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
+	at dotty.tools.dotc.Run.runPhases$1(Run.scala:245)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:253)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:262)
+	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:68)
+	at dotty.tools.dotc.Run.compileUnits(Run.scala:262)
+	at dotty.tools.dotc.Run.compileSources(Run.scala:186)
+	at dotty.tools.dotc.interactive.InteractiveDriver.run(InteractiveDriver.scala:165)
+	at scala.meta.internal.pc.MetalsDriver.run(MetalsDriver.scala:48)
+	at scala.meta.internal.pc.completions.CompletionProvider.completions(CompletionProvider.scala:47)
+
+error while checking new RegisterMsg(null)
+error while checking workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking val registerResponse: ResponseMsg = 
+  workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking  extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking module object WorkerMain extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking package <empty> {
+  import org.apache.logging.log4j.scala.Logging
+  import Communicate.network.{RegisterMsg, ResponseMsg}
+  import Worker.{WorkerServer, WorkerClient}
+  module object WorkerMain extends Logging {
+    logger.info("Worker start")
+    WorkerServer.startserver
+    val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+    logger.info(
+      s"Trying to register worker to channel {
+        {
+          workerClient
+        }
+      }"
+    )
+    val registerResponse: ResponseMsg = 
+      workerClient.RegisterWorker(new RegisterMsg(null))
+  }
+}
+Nov 25, 2022 10:15:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..899>,
+child       = null # -1,
+child span  = [581..900..900]
+java.lang.AssertionError: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..899>,
+child       = null # -1,
+child span  = [581..900..900]
+	at scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:172)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$1(ParserPhase.scala:38)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$adapted$1(ParserPhase.scala:39)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:417)
+	at dotty.tools.dotc.parsing.Parser.parse(ParserPhase.scala:39)
+	at dotty.tools.dotc.parsing.Parser.runOn$$anonfun$1(ParserPhase.scala:48)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.parsing.Parser.runOn(ParserPhase.scala:48)
+	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
+	at dotty.tools.dotc.Run.runPhases$1(Run.scala:245)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:253)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:262)
+	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:68)
+	at dotty.tools.dotc.Run.compileUnits(Run.scala:262)
+	at dotty.tools.dotc.Run.compileSources(Run.scala:186)
+	at dotty.tools.dotc.interactive.InteractiveDriver.run(InteractiveDriver.scala:165)
+	at scala.meta.internal.pc.MetalsDriver.run(MetalsDriver.scala:48)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:41)
+
+error while checking new RegisterMsg(null)
+error while checking workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking val registerResponse: ResponseMsg = 
+  workerClient.RegisterWorker(new RegisterMsg(null))
+error while checking  extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking module object WorkerMain extends Logging {
+  logger.info("Worker start")
+  WorkerServer.startserver
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+  logger.info(
+    s"Trying to register worker to channel {
+      {
+        workerClient
+      }
+    }"
+  )
+  val registerResponse: ResponseMsg = 
+    workerClient.RegisterWorker(new RegisterMsg(null))
+}
+error while checking package <empty> {
+  import org.apache.logging.log4j.scala.Logging
+  import Communicate.network.{RegisterMsg, ResponseMsg}
+  import Worker.{WorkerServer, WorkerClient}
+  module object WorkerMain extends Logging {
+    logger.info("Worker start")
+    WorkerServer.startserver
+    val workerClient: WorkerClient = new WorkerClient("2.2.2.101", 2201)
+    logger.info(
+      s"Trying to register worker to channel {
+        {
+          workerClient
+        }
+      }"
+    )
+    val registerResponse: ResponseMsg = 
+      workerClient.RegisterWorker(new RegisterMsg(null))
+  }
+}
+Nov 25, 2022 10:15:04 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..899>,
+child       = null # -1,
+child span  = [581..900..900]
+java.lang.AssertionError: assertion failed: position error, parent span does not contain child span
+parent      = new RegisterMsg(null) # -1,
+parent span = <565..899>,
+child       = null # -1,
+child span  = [581..900..900]
+	at scala.runtime.Scala3RunTime$.assertFailed(Scala3RunTime.scala:8)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:172)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:197)
+	at dotty.tools.dotc.ast.Positioned.check$1$$anonfun$3(Positioned.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.ast.Positioned.check$1(Positioned.scala:202)
+	at dotty.tools.dotc.ast.Positioned.checkPos(Positioned.scala:223)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$1(ParserPhase.scala:38)
+	at dotty.tools.dotc.parsing.Parser.parse$$anonfun$adapted$1(ParserPhase.scala:39)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at dotty.tools.dotc.core.Phases$Phase.monitor(Phases.scala:417)
+	at dotty.tools.dotc.parsing.Parser.parse(ParserPhase.scala:39)
+	at dotty.tools.dotc.parsing.Parser.runOn$$anonfun$1(ParserPhase.scala:48)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.parsing.Parser.runOn(ParserPhase.scala:48)
+	at dotty.tools.dotc.Run.runPhases$1$$anonfun$1(Run.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
+	at dotty.tools.dotc.Run.runPhases$1(Run.scala:245)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$1(Run.scala:253)
+	at dotty.tools.dotc.Run.compileUnits$$anonfun$adapted$1(Run.scala:262)
+	at dotty.tools.dotc.util.Stats$.maybeMonitored(Stats.scala:68)
+	at dotty.tools.dotc.Run.compileUnits(Run.scala:262)
+	at dotty.tools.dotc.Run.compileSources(Run.scala:186)
+	at dotty.tools.dotc.interactive.InteractiveDriver.run(InteractiveDriver.scala:165)
+	at scala.meta.internal.pc.MetalsDriver.run(MetalsDriver.scala:48)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.highlights(PcDocumentHighlightProvider.scala:44)
+
+2022.11.25 22:15:07 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:18:44 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.25 22:18:45 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.25 22:18:45 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.25 22:18:45 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.25 22:18:45 INFO  time: initialize in 0.74s
+2022.11.25 22:18:46 WARN  Build server is not auto-connectable.
+2022.11.25 22:18:46 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.25 22:18:48 INFO  no build target found for /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.11.25 22:18:50 INFO  time: code lens generation in 3.53s
+2022.11.25 22:23:36 INFO  shutting down Metals
+2022.11.26 00:33:18 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.26 00:33:18 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.26 00:33:18 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.26 00:33:18 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.26 00:33:19 INFO  time: initialize in 0.8s
+2022.11.26 00:33:20 WARN  Build server is not auto-connectable.
+2022.11.26 00:33:20 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:33:22 INFO  no build target found for /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala. Using presentation compiler with project's scala-library version: 3.2.0
+Nov 26, 2022 12:33:23 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2022.11.26 00:33:24 INFO  time: code lens generation in 3.5s
+2022.11.26 00:38:04 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:38:12 INFO  shutting down Metals
+2022.11.26 00:38:12 ERROR Unexpected error initializing serverorg.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+2022.11.26 00:38:42 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:39:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:39:39 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:40:00 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:41:09 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:41:22 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:41:57 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:41:57 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+Nov 26, 2022 12:41:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 250
+Nov 26, 2022 12:41:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 251
+2022.11.26 00:43:01 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:43:01 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:43:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:43:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:43:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.26 00:44:19 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:44:20 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.26 00:44:27 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.26 00:44:44 WARN  no build target for: /home/black/Working/332project/target/scala-2.12/src_managed/main/scalapb/Communicate/network/MasterWorkerServiceGrpc.scala
+2022.11.26 00:45:10 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.26 00:45:15 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.26 00:45:18 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.26 00:54:33 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.26 04:25:59 INFO  shutting down Metals
+2022.11.27 13:24:01 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.27 13:24:02 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.27 13:24:02 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.73.1.
+2022.11.27 13:24:02 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.27 13:24:03 INFO  time: initialize in 0.92s
+2022.11.27 13:24:03 WARN  Build server is not auto-connectable.
+2022.11.27 13:24:03 WARN  no build target for: /home/black/Working/332project/build.sbt
+2022.11.27 13:24:04 INFO  skipping build import with status 'Dismissed'
+2022.11.27 13:24:07 INFO  no build target found for /home/black/Working/332project/build.sbt. Using presentation compiler with project's scala-library version: 3.2.0
+2022.11.27 13:24:08 INFO  time: code lens generation in 3.74s
+2022.11.27 13:31:00 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerState.scala
+2022.11.27 13:31:00 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerServer.scala
+2022.11.27 13:31:01 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerMain.scala
+2022.11.27 13:31:02 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerClient.scala
+2022.11.27 13:31:03 WARN  no build target for: /home/black/Working/332project/src/main/scala/Network/ServerBase.scala
+2022.11.27 13:31:04 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterState.scala
+2022.11.27 13:31:04 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterServer.scala
+2022.11.27 13:31:05 WARN  no build target for: /home/black/Working/332project/src/main/scala/Master/MasterMain.scala
+2022.11.27 13:35:06 WARN  no build target for: /home/black/Working/332project/src/main/scala/Worker/WorkerState.scala
+2022.11.27 13:38:08 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/black/Working/332project/.metals/lsp.trace.json or /home/black/.cache/metals/lsp.trace.json
+2022.11.27 13:38:08 INFO  logging to file /home/black/Working/332project/.metals/metals.log
+2022.11.27 13:38:08 INFO  Started: Metals version 0.11.9 in workspace '/home/black/Working/332project' for client Visual Studio Code 1.71.2.
+2022.11.27 13:38:08 WARN  Can't instantiate JavaInteractiveSemanticdb (version: JdkVersion(8), jdkHome: /usr/lib/jvm/java-8-openjdk-amd64, javac exists: false)
+2022.11.27 13:38:09 INFO  time: initialize in 0.69s
+2022.11.27 13:38:09 WARN  Build server is not auto-connectable.
+2022.11.27 13:38:09 INFO  skipping build import with status 'Dismissed'
+Nov 27, 2022 1:38:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

@@ -14,11 +14,11 @@ object WorkerMain extends Logging{
 
   
   // Register worker to master
-  val workerClient: WorkerClient = new WorkerClient("141.223.16.227",2203) // host and port parameter
+  val workerClient: WorkerClient = new WorkerClient("2.2.2.103",22) // host and port parameter
   
   logger.info(s"Trying to register worker to channel ${workerClient}")
   
-  val registerResponse: ResponseMsg = workerClient.masterBlockingStub.RegisterWorker(new RegisterMsg("141.223.16.227",2201))
+  val registerResponse: ResponseMsg = workerClient.registerWorker(new RegisterMsg("2.2.2.101",22))
   
   if( registerResponse.response == ResponseMsg.ResponseType.ERROR)
   {
