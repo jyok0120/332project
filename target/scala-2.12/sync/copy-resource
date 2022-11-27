@@ -1,1 +1,1 @@
-[[{},{}],{}]
+[[{"${BASE}/src/main/protobuf/network.proto":["${BASE}/target/scala-2.12/classes/network.proto"]},{"${BASE}/target/scala-2.12/classes/network.proto":["${BASE}/src/main/protobuf/network.proto"]}],{"${BASE}/src/main/protobuf/network.proto":{"file":"file:///home/black/Working/332project/src/main/protobuf/network.proto","lastModified":1669525609784}}]

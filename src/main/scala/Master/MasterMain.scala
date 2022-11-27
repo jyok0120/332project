@@ -11,8 +11,7 @@ object MasterMain extends Logging{
   // Check Master - Worker register
   logger.info("Waiting for workers")
   
-  // Might use future for waiting register
-  
+  Thread.sleep(3000)
 
   // Master's state machine
 

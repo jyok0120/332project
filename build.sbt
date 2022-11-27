@@ -12,6 +12,13 @@ Compile / PB.targets := Seq(
 scalapb.gen() -> (Compile / sourceManaged).value / "scalapb"
 )
 
+lazy val master = (project in file("./Master"))
+lazy val worker = (project in file("./Worker"))
+
+mainClass := Some("")
+
+//mainClass in (Compile, master) := Some("Master.MasterMain")
+//mainClass in (Compile, worker) := Some("Worker.WorkerMain")
 
 
 

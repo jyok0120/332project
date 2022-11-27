@@ -14,6 +14,9 @@ object WorkerServer extends ServerInterface{
 }
 
 private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWorkerService {
+  override def registerWorker(request: RegisterMsg): Future[ResponseMsg] = {
+    Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))
+  }
   override def reportMaster(request: ReportMsg): Future[ResponseMsg] = {
     Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))
   }

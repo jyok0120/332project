@@ -18,13 +18,18 @@ object WorkerMain extends Logging{
   
   logger.info(s"Trying to register worker to channel ${workerClient}")
   
+  println("WorkerClient has made")
+
+
   val registerResponse: ResponseMsg = workerClient.registerWorker(new RegisterMsg("2.2.2.101",22))
+
+  println("RegisterWorker has made")
   
-  if( registerResponse.response == ResponseMsg.ResponseType.ERROR)
-  {
-    logger.error("Failed to register Worker")
-    return
-  }
+  // if( registerResponse.response == ResponseMsg.ResponseType.ERROR)
+  // {
+  //   logger.error("Failed to register Worker")
+  //   return
+  // }
   logger.info("Worker Master register successed")
 
   // Worker's state machine
