@@ -9,6 +9,8 @@ import Worker.WorkerStorage._
 import Network.{ServerBase, ServerInterface}
 import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, ReportMsg}
 
+import Master.WorkerClient
+
 object MasterServer extends ServerInterface {
   val server : ServerBase = new ServerBase (
     MasterWorkerServiceGrpc.bindService(new MasterWorkerServiceImpl, ExecutionContext.global),
@@ -20,8 +22,10 @@ object MasterServer extends ServerInterface {
 private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWorkerService with Logging{
   override def registerWorker(request: RegisterMsg): Future[ResponseMsg] = {
     // maybe manage channel here
-    if(checkWorkerExist(request.address, request.port))
+    if(!checkWorkerExist(request.address, request.port))
     {
+      val workerClient: WorkerClient = new WorkerClient("2.2.2.103",22) // host and port parameter
+    
       val workerId = addWorker(request.address, request.port)
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
     }
