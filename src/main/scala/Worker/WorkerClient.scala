@@ -9,7 +9,13 @@ class WorkerClient( host : String, port : Int) {
     private val masterBlockingStub = MasterWorkerServiceGrpc.blockingStub(masterChannel)
     
     def registerWorker(request: RegisterMsg): ResponseMsg = {
-        val response = masterBlockingStub.registerWorker(request)
-        response
+        try {
+            val response = masterBlockingStub.registerWorker(request)
+            response
+        } catch {
+            case e: StatusRuntimeException =>
+                //logger.error(s"RPC failed: ${e.getStatus.toString}")
+                new ResponseMsg( ResponseMsg.ResponseType.ERROR )
+        }
     }
 }
