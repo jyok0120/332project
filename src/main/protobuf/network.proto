@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package Communicate;
+
+service MasterWorkerService {
+  rpc RegisterWorker (RegisterMsg) returns (ResponseMsg) {}
+  rpc ReportMaster (ReportMsg) returns (ResponseMsg) {}
+}
+
+service SamplingService {
+  rpc SampleDataResponse (SampleDataMsg) returns (SampleArrayMsg) {}
+}
+
+service PartitionService {
+  rpc RequestPartition (PartitionRequestMsg) returns (ResponseMsg) {}
+  rpc TerminatePartition (ReportMsg) returns (ResponseMsg) {}
+}
+
+service ShufflingService {
+  rpc RequestShuffling (ShuffleRequestMsg) returns (ResponseMsg) {}
+  rpc ShuffleData (ShuffleDataMsg) returns (ResponseMsg) {}
+  rpc TerminateShuffling (ReportMsg) returns (ResponseMsg) {}
+}
+
+service MergeService {
+  rpc RequestMerge (RegisterMsg) returns (ResponseMsg) {}
+  rpc TerminateMerge (ReportMsg) returns (ResponseMsg) {}
+}
+
+message RegisterMsg {
+  // ip of worker
+  string address = 1;
+  int32 port = 2;  
+}
+
+message ReportMsg {
+  // 
+  bool avialable = 1;
+}
+
+message ResponseMsg {
+  //
+  enum ResponseType {
+    SUCCESS = 0;
+    ERROR = 1;
+  }
+  ResponseType response = 1; // Can't be zero by default 
+}
+
+message SampleDataMsg {
+  string ip = 1;
+  string data = 2; // I don't know the form of ip + data
+}
+
+message SampleArrayMsg {
+  bytes serializedsample = 1;
+}
+
+message PartitionRequestMsg {
+  bytes serializedWorker = 1; 
+}
+
+message ShuffleRequestMsg {
+  bytes serializedPartitionTable = 1;
+}
+
+message ShuffleDataMsg {
+  string worker = 1;
+  string data = 2; // Same as up part
+}

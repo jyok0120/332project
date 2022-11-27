@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating cache (input changed)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 protobuf files to /home/black/Working/332project/target/scala-2.12/src_managed/main/scalapb[0m
+[0m[[0m[0mdebug[0m] [0m[0mprotoc options:[0m
+[0m[[0m[0mdebug[0m] [0m[0mCompiling schema /home/black/Working/332project/src/main/protobuf/network.proto[0m
