@@ -15,7 +15,7 @@ scalapb.gen() -> (Compile / sourceManaged).value / "scalapb"
 lazy val master = (project in file("./Master"))
 lazy val worker = (project in file("./Worker"))
 
-mainClass := Some("")
+mainClass := Some("Master.Main")
 
 //mainClass in (Compile, master) := Some("Master.MasterMain")
 //mainClass in (Compile, worker) := Some("Worker.WorkerMain")
