@@ -35,7 +35,9 @@ message RegisterMsg {
 
 message ReportMsg {
   // 
-  bool avialable = 1;
+  //bool avialable = 1;
+  string address = 1;
+  int32 port = 2; 
 }
 
 message ResponseMsg {

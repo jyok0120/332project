@@ -15,18 +15,16 @@ object FileIoUtils extends Logging {
         }
     }
 
-    def getLinesFromFile(filePath: String, lineOffset: Int, numLines: Int, lineLengthBytes: Int = 100) = {
-        logger.info(s"READ: ${numLines} lines, ${lineLengthBytes} bytes/line")
-
+    def getLinesFromFile(filePath: String, lineOffset: Int, numLines: Int, lineLengthBytes: Int = 100): Array[Array[Byte]] = {
         val inputStream = new BufferedInputStream(new FileInputStream(filePath))
 
         try {
             inputStream skip (lineOffset * lineLengthBytes)
-            val outputArr = Array.fill[Array[Byte]](numLines)(Array.fill[Byte](lineLengthBytes)(Byte.MinValue))
+            val outputArray = Array.fill[Array[Byte]](numLines)(Array.fill[Byte](lineLengthBytes)(Byte.MinValue))
 
-            for (lineIdx <- outputArr.indices)
-                inputStream.read(outputArr(lineIdx), 0, lineLengthBytes)
-            outputArr
+            for (lineIdx <- outputArray.indices)
+                inputStream.read(outputArray(lineIdx), 0, lineLengthBytes)
+            outputArray
         } finally {
             inputStream.close
         }
