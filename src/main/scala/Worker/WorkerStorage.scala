@@ -2,14 +2,21 @@ package Worker
 
 import scala.collection.mutable
 
+import org.apache.logging.log4j.scala.Logging
 
-object WorkerStorage {
+object WorkerStorage extends Logging{
 	private val workerStorage : mutable.Map[Int, (String, Int)] = mutable.Map[Int, (String, Int)]()
 
-    def addWorker(Host : String, Port : Int) = {
-        val index = workerStorage.keysIterator.max + 1
+    def addWorker(Host : String, Port : Int) = 
+        if(workerStorage.isEmpty) {
+            val index = 1
+            workerStorage += (index -> (Host, Port))
+        }
+        else
+        {
+            val index = workerStorage.keysIterator.max + 1
         workerStorage += (index -> (Host, Port))
-    }
+        }
 
     def getWorkerNumber: Int = workerStorage.size
 

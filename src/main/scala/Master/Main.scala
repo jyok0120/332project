@@ -12,13 +12,11 @@ import Worker.WorkerStorage
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
     logger.info("Master start")
-    println("Master start")
     // Start Networking Service
     MasterServer.startserver
 
     // Check Master - Worker register
     logger.info("Waiting for workers")
-    println("Waiting for workers")
     
     val workerRegisterSuccess = Future {
       while(WorkerStorage.getWorkerNumber < 1)
