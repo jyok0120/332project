@@ -31,13 +31,12 @@ object Main extends Logging{
       logger.error("Failed to register Worker")
       return
     }
-    logger.info("Worker Master register successed")
+    logger.error("Worker Master register successed")
 
     // Worker's state machine
 
-
     // End Networking Service
     WorkerServer.stopserver
-    logger.info("Worker finish")
+    logger.error("Worker finish")
   }
 }
