@@ -22,7 +22,8 @@ object PartitioningUtils extends Logging {
         _compareKey(xList, yList)
     }
 
-    def partition(filePath: String, partitionKeyTable: Array[(Array[Byte], (String, Int))], partitionArray: Array[ArrayBuffer[Array[Byte]]], numLines:Int) = {
+    def partition(filePath: String, partitionKeyTable: Array[(Array[Byte], (String, Int))], 
+                                    partitionArray: Array[ArrayBuffer[Array[Byte]]], numLines:Int) = {
         val inputStream = new BufferedInputStream(new FileInputStream(filePath))
 
         try {
