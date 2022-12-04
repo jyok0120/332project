@@ -21,16 +21,18 @@ object MasterServer extends ServerInterface {
 
 private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWorkerService with Logging{
   override def registerWorker(request: RegisterMsg): Future[ResponseMsg] = {
+
+    logger.error("Current worker's address and port " + request.address + " " + request.port)
     // maybe manage channel here
     if(!checkWorkerExist(request.address, request.port))
     {
-      val workerClient: WorkerClient = new WorkerClient("2.2.2.103",22) // host and port parameter
-    
       val workerId = addWorker(request.address, request.port)
+      val workerClient: WorkerClient = new WorkerClient(request.address,request.port) // host and port parameter
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
     }
     else
     {
+      logger.error("Worker register failed")
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.ERROR))
     }
     
