@@ -16,7 +16,7 @@ object PartitioningUtils extends Logging {
             else {
                 if (xList.head > yList.head) 1
                 else if (xList.head < yList.head) -1
-                else _compareKey(xList.drop(1). yList.drop(1))
+                else _compareKey(xList.drop(1), yList.drop(1))
             }
         }
         _compareKey(xList, yList)
