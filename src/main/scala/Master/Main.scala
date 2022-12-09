@@ -8,6 +8,7 @@ import scala.concurrent.duration.Duration
 
 import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
 import Worker.WorkerStorage
+import Network.StateType
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
@@ -25,41 +26,36 @@ object Main extends Logging{
       }
     }
     val workerRegisterSuccessWait = Await.result(workerRegisterSuccess, Duration.Inf)
-    
-    enum stateType {
-      SUCCESS = 0
-      FAIL = 1
-    }
 
     // Master's state machine
-    val stateStatus = stateType.SUCCESS
+    var stateStatus: StateType.Value = StateType.SUCCESS
 
     val sortingState = new SortState
     stateStatus = sortingState.waitWorkerTerminate
     logger.error("Sort state has done")
 
-    if(stateStatus == stateType.SUCCESS)
+    if(stateStatus == StateType.SUCCESS)
     {
       val samplingState = new SamplingState
       stateStatus = samplingState.waitWorkerTerminate
       logger.error("Sample state has done")
     }
 
-    if(stateStatus == stateType.SUCCESS)
+    if(stateStatus == StateType.SUCCESS)
     {
       val partitionState = new PartitionState
       stateStatus = partitionState.waitWorkerTerminate
       logger.error("Parition state has done")
     }
 
-    if(stateStatus == stateType.SUCCESS)
+    if(stateStatus == StateType.SUCCESS)
     {
       val shuffleState = new ShuffleState
       stateStatus = shuffleState.waitWorkerTerminate
       logger.error("Shuffle state has done")
     }
 
-    if(stateStatus == stateType.SUCCESS)
+    if(stateStatus == StateType.SUCCESS)
     {
       val mergeState = new MergeState
       stateStatus = mergeState.waitWorkerTerminate
