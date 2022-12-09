@@ -9,7 +9,7 @@ object WorkerServer extends ServerInterface{
   val server: ServerBase = new ServerBase(
     MasterWorkerServiceGrpc.bindService(new MasterWorkerServiceImpl, ExecutionContext.global),
     "WorkerServer",
-    5678
+    5555
   )
 }
 

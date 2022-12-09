@@ -22,7 +22,7 @@ object Main extends Logging{
     
     //println("WorkerClient has made")
 
-    val registerResponse: ResponseMsg = masterStub.registerWorker(RegisterMsg(address = "2.2.2.103", port = 5678))
+    val registerResponse: ResponseMsg = masterStub.registerWorker(RegisterMsg(address = "2.2.2.103", port = 5555))
 
     //println("RegisterWorker has made")
     
