@@ -6,8 +6,9 @@ import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 
-import Master.MasterServer
+import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
 import Worker.WorkerStorage
+import Network.StateType
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
@@ -25,13 +26,48 @@ object Main extends Logging{
       }
     }
     val workerRegisterSuccessWait = Await.result(workerRegisterSuccess, Duration.Inf)
-    
-    // Master's state machine
 
+    // Master's state machine
+    var stateStatus: StateType.Value = StateType.SUCCESS
+
+    val sortingState = new SortState
+    stateStatus = sortingState.waitWorkerTerminate
+    logger.error("Sort state has done")
+
+    if(stateStatus == StateType.SUCCESS)
+    {
+      val samplingState = new SamplingState
+      stateStatus = samplingState.waitWorkerTerminate
+      logger.error("Sample state has done")
+    }
+
+    if(stateStatus == StateType.SUCCESS)
+    {
+      val partitionState = new PartitionState
+      stateStatus = partitionState.waitWorkerTerminate
+      logger.error("Parition state has done")
+    }
+
+    if(stateStatus == StateType.SUCCESS)
+    {
+      val shuffleState = new ShuffleState
+      stateStatus = shuffleState.waitWorkerTerminate
+      logger.error("Shuffle state has done")
+    }
+
+    if(stateStatus == StateType.SUCCESS)
+    {
+      val mergeState = new MergeState
+      stateStatus = mergeState.waitWorkerTerminate
+      logger.error("Merge state has done")
+    }
+
+    val terminateState = new TerminateState
+    stateStatus = terminateState.waitWorkerTerminate
+    logger.error("Master has terminated")
 
     // End Networking Service
     MasterServer.stopserver
-    logger.info("Master finish")
-    println("Master finish")
+    logger.error("Master finish")
   }
 }
