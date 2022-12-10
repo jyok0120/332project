@@ -14,15 +14,25 @@ trait Mission {
     def getId: Int = id
     def getWorkerIndex: Int = workerIndex
     def getStateType: StateType.Value = stateType
+    def getStatus: StateType.Value = status
     def isTerminated: Boolean = {status == StateType.SUCCESS || status == StateType.FAIL}
-    def 이름 뭐라하냐: Boolean = {status != StateType.WAIT}
+    def waiting: Boolean = {status == StateType.WAIT}
 
 }
 
-class MissionSet() extends Logging {
+class MissionSet( missions : Iterable[Mission] ) extends Logging {
+    val missionSet: Set[Mission] = missions.toSet
 
+    def allMissionComplete: Boolean = {
+        missionSet.map(_.isTerminated).reduce((x,y) => x && y)
+    }
+
+    def getNumWaitingMissions: Int = missionSet.count(! _.isTerminated)
+
+    def allMissionSuccess: Boolean = {
+        missionSet.map(_.)
+    }
 }
 
 object MissionHandler extends Logging {
-    private var currentState: State = null
 }
