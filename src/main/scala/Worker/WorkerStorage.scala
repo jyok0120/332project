@@ -23,4 +23,6 @@ object WorkerStorage extends Logging{
     def checkWorkerExist(Host : String, Port : Int): Boolean = {
         workerStorage.values.exists(_._1 == Host) && workerStorage.values.exists(_._2 == Port)
     }
+
+    def getWorkerAddress(workerIndex : Int): (String, Int) = workerStorage(workerIndex)
 }

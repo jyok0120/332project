@@ -8,7 +8,7 @@ import scala.concurrent.duration.Duration
 
 import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
 import Worker.WorkerStorage
-import Network.StateType
+import State.StateType
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {

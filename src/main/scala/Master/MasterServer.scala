@@ -7,7 +7,7 @@ import scala.concurrent.{ExecutionContext, Future}
 import Worker.WorkerStorage._
 
 import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, ReportMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
 
 import Master.WorkerClient
 
@@ -27,7 +27,6 @@ private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWork
     if(!checkWorkerExist(request.address, request.port))
     {
       val workerId = addWorker(request.address, request.port)
-      //val workerClient: WorkerClient = new WorkerClient(request.address,request.port) // host and port parameter
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
     }
     else
@@ -36,8 +35,5 @@ private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWork
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.ERROR))
     }
     
-  }
-  override def reportMaster(request: ReportMsg): Future[ResponseMsg] = {
-    Future.successful( new ResponseMsg(ResponseMsg.ResponseType.SUCCESS) )
   }
 }
