@@ -4,7 +4,7 @@ package Communicate;
 
 service MasterWorkerService {
   rpc RegisterWorker (RegisterMsg) returns (ResponseMsg) {}
-  rpc ReportMaster (ReportMsg) returns (ResponseMsg) {}
+  rpc SortingData (SortDataMsg) returns (ResponseMsg) {}
 }
 
 service SamplingService {
@@ -13,18 +13,18 @@ service SamplingService {
 
 service PartitionService {
   rpc RequestPartition (PartitionRequestMsg) returns (ResponseMsg) {}
-  rpc TerminatePartition (ReportMsg) returns (ResponseMsg) {}
+ // rpc TerminatePartition (ReportMsg) returns (ResponseMsg) {}
 }
 
 service ShufflingService {
   rpc RequestShuffling (ShuffleRequestMsg) returns (ResponseMsg) {}
   rpc ShuffleData (ShuffleDataMsg) returns (ResponseMsg) {}
-  rpc TerminateShuffling (ReportMsg) returns (ResponseMsg) {}
+  //rpc TerminateShuffling (ReportMsg) returns (ResponseMsg) {}
 }
 
 service MergeService {
   rpc RequestMerge (RegisterMsg) returns (ResponseMsg) {}
-  rpc TerminateMerge (ReportMsg) returns (ResponseMsg) {}
+ // rpc TerminateMerge (ReportMsg) returns (ResponseMsg) {}
 }
 
 message RegisterMsg {
@@ -33,20 +33,8 @@ message RegisterMsg {
   int32 port = 2;  
 }
 
-message ReportMsg {
-  // 
-  //bool avialable = 1;
-  string address = 1;
-  int32 port = 2; 
-}
-
-message ResponseMsg {
-  //
-  enum ResponseType {
-    SUCCESS = 0;
-    ERROR = 1;
-  }
-  ResponseType response = 1; // Can't be zero by default 
+message SortDataMsg {
+  bytes serializedMission = 1;
 }
 
 message SampleDataMsg {
@@ -69,4 +57,13 @@ message ShuffleRequestMsg {
 message ShuffleDataMsg {
   string worker = 1;
   string data = 2; // Same as up part
+}
+
+message ResponseMsg {
+  //
+  enum ResponseType {
+    SUCCESS = 0;
+    ERROR = 1;
+  }
+  ResponseType response = 1; // Can't be zero by default 
 }
