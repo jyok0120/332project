@@ -1,9 +1,9 @@
-package Worker
+package worker
 
 import scala.concurrent.{ExecutionContext, Future}
 
 import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, SortDataMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, SortDataMsg, ResponseMsg}
 
 object WorkerServer extends ServerInterface{
   val server: ServerBase = new ServerBase(
@@ -14,7 +14,11 @@ object WorkerServer extends ServerInterface{
 }
 
 private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWorkerService {
-  override def sortData(sortData: SortDataMsg): Future[ResponseMsg] = {
+  override def registerWorker(request: RegisterMsg): Future[ResponseMsg] = {
+    Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))
+  }
+
+  override def sortingData(sortData: SortDataMsg): Future[ResponseMsg] = {
     // sort에 대해서 handling해야하는 부분 추가
     
     Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))

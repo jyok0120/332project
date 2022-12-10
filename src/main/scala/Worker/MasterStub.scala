@@ -1,4 +1,4 @@
-package Worker
+package worker
 
 import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 

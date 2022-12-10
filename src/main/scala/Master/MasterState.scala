@@ -1,13 +1,13 @@
-package Master
+package master
 
 import scala.concurrent.{Await, Future}
 import org.apache.logging.log4j.scala.Logging
 import scala.concurrent.duration.Duration
 
-import State.{Mission, StateType}
+import state.{Mission, MissionSet, StateStatus, SortMission}
 import Communicate.network.{ResponseMsg, SortDataMsg}
-import Worker.WorkerStorage
-import Master.WorkerClient
+import worker.WorkerStorage
+import utils.SerializationUtils._
 
 trait State extends Logging{
 
@@ -24,17 +24,17 @@ trait State extends Logging{
         // Future.successful(1) 
     }
 
-    def waitWorkerTerminate(): StateType.Value = {
+    def waitWorkerTerminate(): StateStatus.Value = {
 
         val workerExitStatus: Int = Await.result(executeState, Duration.Inf)
 
         val stateStatus = workerExitStatus match {
             case 0 => {
-                StateType.SUCCESS
+                StateStatus.SUCCESS
             }
             case _ => {
                 logger.error(s"State ${this.toString} has failed")
-                StateType.FAIL
+                StateStatus.FAIL
             }
         }
         stateStatus
@@ -44,33 +44,45 @@ trait State extends Logging{
 class SortState extends State{
 
     override def makeMissionSet(): MissionSet = {
-
+        val missionList: Iterable[Mission] = {
+            for( workerIndex <- PartitionStorage.getWorkersIndex) yield {
+                val partitionList = PartitionStorage.getPartitionList(workerIndex)
+                partitionList.map {
+                    x => (new SortMission(workerIndex, StateStatus.WAIT))
+                }.toArray
+            }
+        }.flatten
+        
+        new MissionSet (missionList)
     }
 
     override def executeState(): Future[Int] = {
 
         while(! terminateCondition ) {
-            for { mission : Misssion <- missionSet} yield {
+            
+            for { mission : Mission <- missionSet.missionSet} yield {
                 if( mission.waiting ) {
-                    val sortMsg = new SortDataMsg(어떤 정보 넘겨주지)
+                    val sortMsg = new SortDataMsg(serializeToByteString(mission))
                     val workerAddress: (String, Int) = WorkerStorage.getWorkerAddress(mission.getWorkerIndex)
                     
                     logger.error(s"${workerAddress} trying to execute sort state")
 
-                    val sortResponseMsg = WorkerClient.sortData(sortMsg)
+                    val workerClient = new WorkerClient(workerAddress._1, workerAddress._2)
 
-                    sort.response match {
-                        case ResponseType.SUCCESS => {
-                            condition = true
+                    val sortResponseMsg = workerClient.sortingData(sortMsg)
+
+                    sortResponseMsg.response match {
+                        case ResponseMsg.ResponseType.SUCCESS => {
+                            mission.setStatus(StateStatus.DONE)
                         }
-                        case ResponseType.ERROR => {
-                            condition = false
+                        case ResponseMsg.ResponseType.ERROR => {
+                            mission.setStatus(StateStatus.WAIT)
                         }
                     }
+                    logger.error(s"${workerAddress} has finished sort state")
                 }
             }
-             logger.error(s"${workerAddress} has finished sort state")
-             logger.error(s"${numWaitingMission} missions are waiting")
+            logger.error(s"${numWaitingMission} missions are waiting")
         }
         successCondition match {
             case true => Future.successful(0)
@@ -79,6 +91,7 @@ class SortState extends State{
     }
 }
 
+/*
 class SamplingState extends State{
 
 }
@@ -97,4 +110,4 @@ class MergeState extends State{
 
 class TerminateState extends State{
 
-}
+}*/

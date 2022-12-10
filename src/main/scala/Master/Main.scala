@@ -1,4 +1,4 @@
-package Master
+package master
 
 import org.apache.logging.log4j.scala.Logging
 
@@ -6,9 +6,9 @@ import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 
-import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
-import Worker.WorkerStorage
-import State.StateType
+// import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
+import worker.WorkerStorage
+import state.StateStatus
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
@@ -28,34 +28,35 @@ object Main extends Logging{
     val workerRegisterSuccessWait = Await.result(workerRegisterSuccess, Duration.Inf)
 
     // Master's state machine
-    var stateStatus: StateType.Value = StateType.SUCCESS
+    var stateStatus: StateStatus.Value = StateStatus.SUCCESS
 
     val sortingState = new SortState
     stateStatus = sortingState.waitWorkerTerminate
     logger.error("Sort state has done")
 
-    if(stateStatus == StateType.SUCCESS)
+    if(stateStatus == StateStatus.SUCCESS)
     {
-      val samplingState = new SamplingState
-      stateStatus = samplingState.waitWorkerTerminate
+      //val samplingState = new SamplingState
+      //stateStatus = samplingState.waitWorkerTerminate
       logger.error("Sample state has done")
     }
 
-    if(stateStatus == StateType.SUCCESS)
+    /*
+    if(stateStatus == StateStatus.SUCCESS)
     {
       val partitionState = new PartitionState
       stateStatus = partitionState.waitWorkerTerminate
       logger.error("Parition state has done")
     }
 
-    if(stateStatus == StateType.SUCCESS)
+    if(stateStatus == StateStatus.SUCCESS)
     {
       val shuffleState = new ShuffleState
       stateStatus = shuffleState.waitWorkerTerminate
       logger.error("Shuffle state has done")
     }
 
-    if(stateStatus == StateType.SUCCESS)
+    if(stateStatus == StateStatus.SUCCESS)
     {
       val mergeState = new MergeState
       stateStatus = mergeState.waitWorkerTerminate
@@ -65,6 +66,7 @@ object Main extends Logging{
     val terminateState = new TerminateState
     stateStatus = terminateState.waitWorkerTerminate
     logger.error("Master has terminated")
+    */
 
     // End Networking Service
     MasterServer.stopserver

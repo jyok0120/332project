@@ -3,7 +3,6 @@ import org.apache.logging.log4j.scala.Logging
 import scala.util.Random
 import scala.collection.mutable.ArrayBuffer
 import java.io._
-import utils.PartitioningUtils
 
 
 object MergingUtils extends Logging {

@@ -1,15 +1,15 @@
-package Master
+package master
 
 import org.apache.logging.log4j.scala.Logging
 
 import scala.concurrent.{ExecutionContext, Future}
 
-import Worker.WorkerStorage._
+import worker.WorkerStorage._
 
 import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, SortDataMsg}
 
-import Master.WorkerClient
+// import Master.WorkerClient
 
 object MasterServer extends ServerInterface {
   val server : ServerBase = new ServerBase (
@@ -34,6 +34,10 @@ private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWork
       logger.error("Worker register failed")
       Future.successful(new ResponseMsg(ResponseMsg.ResponseType.ERROR))
     }
-    
   }
+
+  override def sortingData(sortData: SortDataMsg): Future[ResponseMsg] = {
+    Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
+  }
+  
 }

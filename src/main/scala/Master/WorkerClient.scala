@@ -1,20 +1,20 @@
-package Master
+package master
 
 import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 
 import org.apache.logging.log4j.scala.Logging
 
-import Communicate.network.{MasterWorkerServiceGrpc, StateMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, SortDataMsg, ResponseMsg}
 
 
 class WorkerClient( host : String, port : Int) extends Logging{
     private val workerChannel = ManagedChannelBuilder.forAddress(host,port).usePlaintext.build
     private val workerBlockingStub = MasterWorkerServiceGrpc.blockingStub(workerChannel)
-    
-    def stateTransitionWorker(request: StateMsg): ResponseMsg = {
+
+    def sortingData(sortData: SortDataMsg): ResponseMsg = {
         try {
-            logger.error("Check request message " + request)
-            val response = workerBlockingStub.stateTransitionWorker(request)
+            logger.error("Check sort data message " + sortData)
+            val response = workerBlockingStub.sortingData(sortData)
             response
         } catch {
             case e: StatusRuntimeException =>

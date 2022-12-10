@@ -1,9 +1,9 @@
-package Worker
+package worker
 
 import org.apache.logging.log4j.scala.Logging
 
 import Communicate.network.{RegisterMsg, ResponseMsg}
-import Worker.{WorkerServer, MasterStub}
+import worker.{WorkerServer, MasterStub}
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {

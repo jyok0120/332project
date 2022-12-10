@@ -1,22 +1,22 @@
-package State
+package state
 
-import State.StateType
 import org.apache.logging.log4j.scala.Logging
 
-import Master.State
 
-trait Mission {
-    protected val id : Int
-    protected val workerIndex : Int
-    protected val stateType : StateType.Value
-    protected val status : StateType.Value 
+abstract class Mission (missionWorkerIndex : Int,
+                         missionStatus : StateStatus.Value, 
+                         missionStateType : StateType.Value ) extends Serializable {
 
-    def getId: Int = id
+    protected val workerIndex : Int = missionWorkerIndex
+    protected val stateType : StateType.Value = missionStateType
+    protected var status : StateStatus.Value = missionStatus
+
     def getWorkerIndex: Int = workerIndex
     def getStateType: StateType.Value = stateType
-    def getStatus: StateType.Value = status
-    def isTerminated: Boolean = {status == StateType.SUCCESS || status == StateType.FAIL}
-    def waiting: Boolean = {status == StateType.WAIT}
+    def getStatus: StateStatus.Value = status
+    def setStatus(newStatus : StateStatus.Value): Unit = { status = newStatus}
+    def isTerminated: Boolean = {status == StateStatus.SUCCESS || status == StateStatus.FAIL}
+    def waiting: Boolean = {status == StateStatus.WAIT}
 
 }
 
@@ -30,9 +30,10 @@ class MissionSet( missions : Iterable[Mission] ) extends Logging {
     def getNumWaitingMissions: Int = missionSet.count(! _.isTerminated)
 
     def allMissionSuccess: Boolean = {
-        missionSet.map(_.)
+        missionSet.map(_.getStatus == StateStatus.SUCCESS).reduce((x,y) => x && y)
     }
 }
 
-object MissionHandler extends Logging {
-}
+class SortMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value) 
+extends Mission (missionWorkerIndex, missionStatus, StateType.SORT)
+with Serializable{ }

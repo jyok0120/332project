@@ -4,7 +4,7 @@ package Communicate;
 
 service MasterWorkerService {
   rpc RegisterWorker (RegisterMsg) returns (ResponseMsg) {}
-  rpc SortData (SortDataMsg) returns (ResponseMsg) {}
+  rpc SortingData (SortDataMsg) returns (ResponseMsg) {}
 }
 
 service SamplingService {
@@ -34,8 +34,7 @@ message RegisterMsg {
 }
 
 message SortDataMsg {
-  // 무슨 데이터를 보내줘야하는지 모르겠네
-  
+  bytes serializedMission = 1;
 }
 
 message SampleDataMsg {

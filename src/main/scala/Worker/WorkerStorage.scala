@@ -1,4 +1,4 @@
-package Worker
+package worker
 
 import scala.collection.mutable
 
