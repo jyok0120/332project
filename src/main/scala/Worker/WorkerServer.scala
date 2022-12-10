@@ -2,8 +2,8 @@ package worker
 
 import scala.concurrent.{ExecutionContext, Future}
 
-import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, SortDataMsg, ResponseMsg}
+import network.{ServerBase, ServerInterface}
+import communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, SortDataMsg, ResponseMsg}
 
 object WorkerServer extends ServerInterface{
   val server: ServerBase = new ServerBase(

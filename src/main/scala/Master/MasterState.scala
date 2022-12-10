@@ -5,7 +5,7 @@ import org.apache.logging.log4j.scala.Logging
 import scala.concurrent.duration.Duration
 
 import state.{Mission, MissionSet, StateStatus, SortMission}
-import Communicate.network.{ResponseMsg, SortDataMsg}
+import communicate.network.{ResponseMsg, SortDataMsg}
 import worker.WorkerStorage
 import utils.SerializationUtils._
 

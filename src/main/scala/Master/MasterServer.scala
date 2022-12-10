@@ -6,8 +6,8 @@ import scala.concurrent.{ExecutionContext, Future}
 
 import worker.WorkerStorage._
 
-import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, SortDataMsg}
+import network.{ServerBase, ServerInterface}
+import communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, SortDataMsg}
 
 // import Master.WorkerClient
 
