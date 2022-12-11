@@ -3,7 +3,7 @@ package worker
 import scala.concurrent.{ExecutionContext, Future}
 
 import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, SortDataMsg, ResponseMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, DivideMsg, SortDataMsg, ResponseMsg}
 
 object WorkerServer extends ServerInterface{
   val server: ServerBase = new ServerBase(
@@ -15,6 +15,10 @@ object WorkerServer extends ServerInterface{
 
 private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWorkerService {
   override def registerWorker(request: RegisterMsg): Future[ResponseMsg] = {
+    Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))
+  }
+
+  override def divideData(divideData: DivideMsg): Future[ResponseMsg] = {
     Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS ))
   }
 

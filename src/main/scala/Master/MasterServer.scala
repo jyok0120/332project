@@ -7,7 +7,7 @@ import scala.concurrent.{ExecutionContext, Future}
 import worker.WorkerStorage._
 
 import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, SortDataMsg, SampleDataMsg, SampleArrayMsg}
+import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg, DivideMsg, SortDataMsg, SampleDataMsg, SampleArrayMsg}
 
 // import Master.WorkerClient
 
@@ -36,11 +36,15 @@ private class MasterWorkerServiceImpl extends MasterWorkerServiceGrpc.MasterWork
     }
   }
 
+  override def divideData(divideData: DivideMsg): Future[ResponseMsg] = {
+    Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
+  }
+
   override def sortingData(sortData: SortDataMsg): Future[ResponseMsg] = {
     Future.successful(new ResponseMsg(ResponseMsg.ResponseType.SUCCESS))
   }
   
-  override def sampleDataResponse(sampleData: SampleDataMsg): Future[SampleArrayMsg] = {
-    Future.successful(new SampleArrayMsg(여기다가 뭘 넣을것인가))
-  }
+  //override def sampleDataResponse(sampleData: SampleDataMsg): Future[SampleArrayMsg] = {
+    //Future.successful(new SampleArrayMsg(여기다가 뭘 넣을것인가))
+  //}
 }

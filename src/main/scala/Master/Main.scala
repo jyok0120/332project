@@ -40,7 +40,7 @@ object Main extends Logging{
       stateStatus = sortingState.waitWorkerTerminate
       logger.error("Sort state has done")
     }
-    
+    /*
     if(stateStatus == StateStatus.SUCCESS)
     {
       val samplingState = new SamplingState
@@ -48,7 +48,7 @@ object Main extends Logging{
       logger.error("Sample state has done")
     }
 
-    /*
+    
     if(stateStatus == StateStatus.SUCCESS)
     {
       val partitionState = new PartitionState

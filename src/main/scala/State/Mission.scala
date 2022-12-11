@@ -7,15 +7,15 @@ abstract class Mission (missionWorkerIndex : Int,
                          missionStatus : StateStatus.Value, 
                          missionStateType : StateType.Value,
                          missionSampleRatio : Float,
-                         missionOffset : Array[(Int,Int)]
+                         missionOffset : Array[(Int,Int)],
                          missionInputBlock : Array[String],
                          misssionOutputBlock : Array[String] ) extends Serializable {
 
     protected val workerIndex : Int = missionWorkerIndex
     protected val stateType : StateType.Value = missionStateType
     protected var status : StateStatus.Value = missionStatus
-    val inputBlock: Array[String]
-    val outputBlock: Array[String]
+    val inputBlock: Array[String] = missionInputBlock
+    val outputBlock: Array[String] = misssionOutputBlock
     val offset: Array[(Int, Int)] = missionOffset
     val sampleRatio: Float = missionSampleRatio
 
@@ -42,18 +42,18 @@ class MissionSet( missions : Iterable[Mission] ) extends Logging {
     }
 }
 
-class DivideMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value, missionOffset : Array[(Int,Int)],
-                    missionInputBlock : Array[String], misssionOutputBlock : Array[String]) 
-extends Mission (missionWorkerIndex, missionStatus, StateType.DIVIDE, 0, missionOffset, missionInputBlock, misssionOutputBlock)
+class DivideMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value, 
+                    missionOffset : Array[(Int,Int)], misssionOutputBlock : Array[String]) 
+extends Mission (missionWorkerIndex, missionStatus, StateType.DIVIDE, 0, missionOffset, Array[String]("BlockMission"), misssionOutputBlock)
 with Serializable{}
 
 
-class SortMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value,
-                    missionInputBlock : Array[String], misssionOutputBlock : Array[String])  
-extends Mission (missionWorkerIndex, missionStatus, StateType.SORT, 0, null, missionInputBlock, misssionOutputBlock)
+final class SortMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value,
+                    misssionOutputBlock : Array[String])  
+extends Mission (missionWorkerIndex, missionStatus, StateType.SORT, 0, null, Array[String]("SortMission"), misssionOutputBlock)
 with Serializable{}
 
-class SampleDataMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value, missionSampleRatio : Float,
-                    missionInputBlock : Array[String], misssionOutputBlock : Array[String]) 
-extends Mission (missionWorkerIndex, missionStatus, StateType.SAMPLE, null, missionSampleRatio, missionInputBlock, misssionOutputBlock)
-with Serializable{}
+//class SampleDataMission(missionWorkerIndex : Int, missionStatus : StateStatus.Value,
+//                        missionSampleRatio : Float, misssionOutputBlock : Array[String]) 
+//extends Mission (missionWorkerIndex, missionStatus, StateType.SAMPLE, null, missionSampleRatio, Array[String]("SampleMission"), misssionOutputBlock)
+//with Serializable{}

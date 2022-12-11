@@ -4,8 +4,9 @@ package Communicate;
 
 service MasterWorkerService {
   rpc RegisterWorker (RegisterMsg) returns (ResponseMsg) {}
+  rpc DivideData (DivideMsg) returns (ResponseMsg) {}
   rpc SortingData (SortDataMsg) returns (ResponseMsg) {}
-  rpc SampleDataResponse (SampleDataMsg) returns (SampleArrayMsg) {}
+  //rpc SampleDataResponse (SampleDataMsg) returns (SampleArrayMsg) {}
 }
 
 service SamplingService {
@@ -32,6 +33,10 @@ message RegisterMsg {
   // ip of worker
   string address = 1;
   int32 port = 2;  
+}
+
+message DivideMsg {
+  bytes serializedMission = 1;
 }
 
 message SortDataMsg {
