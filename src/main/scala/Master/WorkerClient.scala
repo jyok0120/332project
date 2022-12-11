@@ -4,12 +4,26 @@ import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 
 import org.apache.logging.log4j.scala.Logging
 
-import communicate.network.{MasterWorkerServiceGrpc, SortDataMsg, ResponseMsg}
+
+import Communicate.network.{MasterWorkerServiceGrpc, DivideMsg, SortDataMsg, ResponseMsg, SampleDataMsg, SampleArrayMsg}
+
 
 
 class WorkerClient( host : String, port : Int) extends Logging{
     private val workerChannel = ManagedChannelBuilder.forAddress(host,port).usePlaintext.build
     private val workerBlockingStub = MasterWorkerServiceGrpc.blockingStub(workerChannel)
+
+    def divideData(divideData: DivideMsg): ResponseMsg = {
+         try {
+            logger.error("Check divide data message " + divideData)
+            val response = workerBlockingStub.divideData(divideData)
+            response
+        } catch {
+            case e: StatusRuntimeException =>
+                //logger.error(s"RPC failed: ${e.getStatus.toString}")
+                new ResponseMsg( ResponseMsg.ResponseType.ERROR )
+        }
+    }
 
     def sortingData(sortData: SortDataMsg): ResponseMsg = {
         try {
@@ -22,4 +36,17 @@ class WorkerClient( host : String, port : Int) extends Logging{
                 new ResponseMsg( ResponseMsg.ResponseType.ERROR )
         }
     }
+/*
+    def sampleDataResponse(sampleData: SampleDataMsg): SampleArrayMsg = {
+         try {
+            logger.error("Check sample data message " + sampleData)
+            val response = workerBlockingStub.sortingData(sampleData)
+            response
+        } catch {
+            여긴 어떡해야하나
+            //case e: StatusRuntimeException =>
+                //logger.error(s"RPC failed: ${e.getStatus.toString}")
+                //new ResponseMsg( ResponseMsg.ResponseType.ERROR )
+        }
+    }*/
 }

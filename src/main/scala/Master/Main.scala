@@ -30,25 +30,32 @@ object Main extends Logging{
     // Master's state machine
     var stateStatus: StateStatus.Value = StateStatus.SUCCESS
 
-    val sortingState = new SortState
-    stateStatus = sortingState.waitWorkerTerminate
-    logger.error("Sort state has done")
+    val divideState = new DivideState
+    stateStatus = divideState.waitWorkerTerminate
+    logger.error("divide in to block")
 
     if(stateStatus == StateStatus.SUCCESS)
     {
-      //val samplingState = new SamplingState
-      //stateStatus = samplingState.waitWorkerTerminate
+      val sortingState = new SortState
+      stateStatus = sortingState.waitWorkerTerminate
+      logger.error("Sort state has done")
+    }
+    /*
+    if(stateStatus == StateStatus.SUCCESS)
+    {
+      val samplingState = new SamplingState
+      stateStatus = samplingState.waitWorkerTerminate
       logger.error("Sample state has done")
     }
 
-    /*
+    
     if(stateStatus == StateStatus.SUCCESS)
     {
       val partitionState = new PartitionState
       stateStatus = partitionState.waitWorkerTerminate
       logger.error("Parition state has done")
     }
-
+    
     if(stateStatus == StateStatus.SUCCESS)
     {
       val shuffleState = new ShuffleState
@@ -61,12 +68,12 @@ object Main extends Logging{
       val mergeState = new MergeState
       stateStatus = mergeState.waitWorkerTerminate
       logger.error("Merge state has done")
-    }
+    }*/
 
-    val terminateState = new TerminateState
-    stateStatus = terminateState.waitWorkerTerminate
-    logger.error("Master has terminated")
-    */
+    //val terminateState = new TerminateState
+    //stateStatus = terminateState.waitWorkerTerminate
+    //logger.error("Master has terminated")
+    
 
     // End Networking Service
     MasterServer.stopserver
