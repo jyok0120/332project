@@ -16,6 +16,7 @@ WorkerServer의 경우 서버마다 코드의 값을 바꿔줘야 한다.
 * IP : 2.2.2.109 Port : 9999
 * IP : 2.2.2.110 Port : 1111
 * IP : 2.2.2.111 Port : 2222
+
 Worker 폴더의 Main에서 address = "2.2.2.103", port = "3333" 이런식으로 되어 있는 부분을
 바꾸고, Worker 폴더으 WorkerServer에서 server를 만들 때 숫자를 바꾸면 된다.
 
