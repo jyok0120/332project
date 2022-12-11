@@ -6,12 +6,14 @@ import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 
-// import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
 import worker.WorkerStorage
 import state.StateStatus
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
+
+    MasterArgument.setWorkerNum(args)
+
     logger.info("Master start")
     // Start Networking Service
     MasterServer.startserver
@@ -20,7 +22,7 @@ object Main extends Logging{
     logger.info("Waiting for workers")
     
     val workerRegisterSuccess = Future {
-      while(WorkerStorage.getWorkerNumber < 1)
+      while(WorkerStorage.getWorkerNumber < MasterArgument.NumWorker) // This number refers to maximum worker num
       {
         Thread.sleep(3000)
       }
