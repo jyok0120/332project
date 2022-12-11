@@ -4,7 +4,9 @@ import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 
 import org.apache.logging.log4j.scala.Logging
 
+
 import Communicate.network.{MasterWorkerServiceGrpc, DivideMsg, SortDataMsg, ResponseMsg, SampleDataMsg, SampleArrayMsg}
+
 
 
 class WorkerClient( host : String, port : Int) extends Logging{
