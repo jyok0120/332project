@@ -12,8 +12,6 @@ import state.StateStatus
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
 
-    MasterArgument.setWorkerNum(args)
-
     logger.info("Master start")
     // Start Networking Service
     MasterServer.startserver
