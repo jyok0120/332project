@@ -6,14 +6,9 @@ import scala.concurrent.{Await, Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 
-<<<<<<< HEAD
-import Master.MasterServer
-import Worker.WorkerStorage
-=======
 import Master.{MasterServer, SortState, SamplingState, PartitionState, ShuffleState, MergeState, TerminateState}
 import Worker.WorkerStorage
 import Network.StateType
->>>>>>> c82d93fe43f98ef7ad13a90dd9b67d3713999e80
 
 object Main extends Logging{
   def main(args: Array[String]): Unit = {
@@ -30,14 +25,8 @@ object Main extends Logging{
         Thread.sleep(3000)
       }
     }
-<<<<<<< HEAD
-    
-    val workerRegisterSuccessWait = Await.result(workerRegisterSuccess, Duration.Inf)
-    
-=======
     val workerRegisterSuccessWait = Await.result(workerRegisterSuccess, Duration.Inf)
 
->>>>>>> c82d93fe43f98ef7ad13a90dd9b67d3713999e80
     // Master's state machine
     var stateStatus: StateType.Value = StateType.SUCCESS
 
@@ -79,11 +68,6 @@ object Main extends Logging{
 
     // End Networking Service
     MasterServer.stopserver
-<<<<<<< HEAD
-    logger.info("Master finish")
-    println("Master finish")
-=======
     logger.error("Master finish")
->>>>>>> c82d93fe43f98ef7ad13a90dd9b67d3713999e80
   }
 }
