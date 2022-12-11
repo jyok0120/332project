@@ -5,5 +5,5 @@ object StateStatus extends Enumeration {
 }
 
 object StateType extends Enumeration {
-    val SORT, SAMPLE, PARITION, SHUFFLE, MERGE,TERMINATE = Value
+    val DIVIDE, SORT, SAMPLE, PARITION, SHUFFLE, MERGE,TERMINATE = Value
 }

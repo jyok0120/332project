@@ -5,10 +5,11 @@ package Communicate;
 service MasterWorkerService {
   rpc RegisterWorker (RegisterMsg) returns (ResponseMsg) {}
   rpc SortingData (SortDataMsg) returns (ResponseMsg) {}
+  rpc SampleDataResponse (SampleDataMsg) returns (SampleArrayMsg) {}
 }
 
 service SamplingService {
-  rpc SampleDataResponse (SampleDataMsg) returns (SampleArrayMsg) {}
+ 
 }
 
 service PartitionService {

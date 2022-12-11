@@ -5,7 +5,7 @@ import org.apache.logging.log4j.scala.Logging
 import scala.concurrent.duration.Duration
 
 import state.{Mission, MissionSet, StateStatus, SortMission}
-import Communicate.network.{ResponseMsg, SortDataMsg}
+import Communicate.network.{ResponseMsg, SortDataMsg, SampleDataMsg}
 import worker.WorkerStorage
 import utils.SerializationUtils._
 
@@ -41,15 +41,38 @@ trait State extends Logging{
     }
 }
 
+class DivideState extends State{
+
+    override def makeMissionSet(): MissionSet = {
+        val missionList: Iterable[Mission] = {
+            for( workerIndex <- PartitionStorage.getWorkersIndex) yield {
+                val partitionList = PartitionStorage.getPartitionList(workerIndex)
+                partitionList.map ({
+                    x => {
+                        val offset: 
+                        new DivideMission(workerIndex, StateStatus.WAIT, offset, 출력)
+                    }
+                }).toArray
+            }
+        }.flatten
+        
+        new MissionSet (missionList)
+    }
+
+    override def execute(): Future[Int] = {
+
+    }
+}
+
 class SortState extends State{
 
     override def makeMissionSet(): MissionSet = {
         val missionList: Iterable[Mission] = {
             for( workerIndex <- PartitionStorage.getWorkersIndex) yield {
                 val partitionList = PartitionStorage.getPartitionList(workerIndex)
-                partitionList.map {
-                    x => (new SortMission(workerIndex, StateStatus.WAIT))
-                }.toArray
+                partitionList.map ({
+                    x => (new SortMission(workerIndex, StateStatus.WAIT, 출ㄺ))
+                }).toArray
             }
         }.flatten
         
@@ -89,13 +112,57 @@ class SortState extends State{
             case false => Future.successful(1)
         }
     }
+
+    // 여기에 result handler가 있어야 하려나... partition storage를 어케 해야할지 모르겠음
 }
 
-/*
+
 class SamplingState extends State{
 
+    override def makeMissionSet(): MissionSet = {
+
+        val sampleRatio = 0.03
+
+         val missionList: Iterable[Mission] = {
+            for( workerIndex <- PartitionStorage.getWorkersIndex) yield {
+                val partitionList = PartitionStorage.getPartitionList(workerIndex)
+                partitionList.map ({
+                    x => (new SampleDataMission(workerIndex, StateStatus.WAIT, sampleRatio, 출력))
+                }).toArray
+            }
+        }.flatten
+        
+        new MissionSet (missionList)
+    }
+
+    override def executeState(): Future[Int] = {
+        while(! terminateCondition ) {
+            
+            for { mission : Mission <- missionSet.missionSet} yield {
+                if( mission.waiting ) {
+                    val sampleData = new SampleDataMsg(serializeToByteString(mission))
+                    val workerAddress: (String, Int) = WorkerStorage.getWorkerAddress(mission.getWorkerIndex)
+                    
+                    logger.error(s"${workerAddress} trying to execute sample state")
+
+                    val workerClient = new WorkerClient(workerAddress._1, workerAddress._2)
+
+                    val sampleDataResponse = workerClient.sampleDataResponse(sampleData)
+
+                    // sample array data를 가지고 어떻게 처리할 건가
+                }
+            }
+            logger.error(s"${numWaitingMission} missions are waiting")
+        }
+        successCondition match {
+            case true => Future.successful(0)
+            case false => Future.successful(1)
+        }
+    }
 }
 
+
+/*
 class PartitionState extends State{
 
 }
