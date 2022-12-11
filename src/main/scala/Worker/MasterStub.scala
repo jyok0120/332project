@@ -1,10 +1,10 @@
-package Worker
+package worker
 
 import io.grpc.{ManagedChannel, ManagedChannelBuilder, StatusRuntimeException}
 
 import org.apache.logging.log4j.scala.Logging
 
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
+import communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, ResponseMsg}
 
 class MasterStub( host : String, port : Int) extends Logging{
     private val masterChannel = ManagedChannelBuilder.forAddress(host,port).usePlaintext.build
