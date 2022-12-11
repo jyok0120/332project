@@ -3,8 +3,8 @@ package worker
 import scala.concurrent.{ExecutionContext, Future}
 
 
-import Network.{ServerBase, ServerInterface}
-import Communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, DivideMsg, SortDataMsg, ResponseMsg}
+import network.{ServerBase, ServerInterface}
+import communicate.network.{MasterWorkerServiceGrpc, RegisterMsg, DivideMsg, SortDataMsg, ResponseMsg}
 
 
 object WorkerServer extends ServerInterface{
